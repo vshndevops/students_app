@@ -1,0 +1,64 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Details</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    table {
+      width: 100%;
+      max-width: 800px;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Details</h1>
+  <table id="students-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% students.forEach(student => { %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+          <td><%= student.mobile %></td>
+          <td><%= student.address %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
