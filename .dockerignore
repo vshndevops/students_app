@@ -1,0 +1,6 @@
+db.sql
+Dfile
+Dockerfile
+.git*
+terraform
+.dockerignore
