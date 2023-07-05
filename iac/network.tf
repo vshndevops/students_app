@@ -1,20 +1,22 @@
 #vpc
 
-resource "aws_vpc" "devops" {
-  cidr_block = "172.16.0.0/24"
+resource "aws_vpc" "vpc" {
+  cidr_block = var.cidr_block
+  
   tags = {
-    Name = "DevOpsLabs"
+    Name = var.tag
   }
 
 }
 
 
 resource "aws_subnet" "subnet" {
-  vpc_id            = aws_vpc.devops.id
-  cidr_block        = "172.16.0.0/26"
-  availability_zone = "us-east-1a"
+  vpc_id            = aws_vpc.vpc.id
+  cidr_block        = cidrsubnet(var.cidr_block, 2, 0)
+  availability_zone = var.region
 
 }
+
 
 # Internet gateway
 
