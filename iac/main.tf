@@ -7,18 +7,11 @@ provider "aws" {
 
 resource "aws_network_interface" "ec2" {
   subnet_id   = aws_subnet.subnet.id
-  private_ips = [cidrhost(var.cidr_block, 35)]
+  private_ips = [cidrhost(var.cidr_block, 70)]
 
 }
 
 
-# elastic ip
-
-resource "aws_eip" "ec2" {
-  domain                    = "vpc"
-  network_interface         = aws_network_interface.ec2.id
-  associate_with_private_ip = [cidrhost(var.cidr_block, 35)]
-}
 
 # ec2 instance 
 
