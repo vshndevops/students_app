@@ -21,10 +21,10 @@ resource "aws_instance" "ec2" {
   key_name = "lab-key"
   associate_public_ip_address = true
 
-  network_interface {
-    network_interface_id = aws_network_interface.ec2.id
-    device_index         = 0
-  }
+  # network_interface {
+  #   network_interface_id = aws_network_interface.ec2.id
+  #   device_index         = 0
+  # }
 
 
 }
