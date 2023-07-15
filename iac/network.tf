@@ -1,19 +1,8 @@
-#vpc
-
-resource "aws_vpc" "vpc" {
-  cidr_block = var.cidr_block
-  
-  tags = {
-    Name = var.tag
-  }
-
-}
-
 
 resource "aws_subnet" "subnet" {
-  vpc_id            = aws_vpc.vpc.id
-  cidr_block        = cidrsubnet(var.cidr_block, 2, 0)
-  availability_zone = var.region
+  vpc_id            = "vpc-01b068a477baa5e42"
+  cidr_block        = cidrsubnet(var.cidr_block, 2, 1)
+  availability_zone = "${var.region}a"
 
 }
 
@@ -21,13 +10,13 @@ resource "aws_subnet" "subnet" {
 # Internet gateway
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.devops.id
+  vpc_id = "vpc-01b068a477baa5e42"
 
 }
 
 
 resource "aws_route_table" "rt1" {
-  vpc_id = aws_vpc.devops.id
+  vpc_id = "vpc-01b068a477baa5e42"
 
   route {
     cidr_block = "0.0.0.0/0"
