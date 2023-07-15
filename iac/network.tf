@@ -7,20 +7,20 @@ resource "aws_subnet" "subnet" {
 }
 
 
-# Internet gateway
+# # Internet gateway
 
-resource "aws_internet_gateway" "igw" {
-  vpc_id = "vpc-01b068a477baa5e42"
+# resource "aws_internet_gateway" "igw" {
+#   vpc_id = "vpc-01b068a477baa5e42"
 
-}
+# }
 
 
-resource "aws_route_table" "rt1" {
-  vpc_id = "vpc-01b068a477baa5e42"
+# resource "aws_route_table" "rt1" {
+#   vpc_id = "vpc-01b068a477baa5e42"
 
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw.id
-  }
+#   route {
+#     cidr_block = "0.0.0.0/0"
+#     gateway_id = aws_internet_gateway.igw.id
+#   }
 
-}
+# }
