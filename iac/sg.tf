@@ -3,7 +3,7 @@
 resource "aws_security_group" "inbound_rule" {
   name        = "ec2_inbound"
   description = "Allow Internet Ingress"
-  vpc_id      = aws_vpc.devops.id
+  vpc_id      = "vpc-01b068a477baa5e42"
 
   ingress {
     description = "SSH"
