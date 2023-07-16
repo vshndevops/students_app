@@ -21,6 +21,7 @@ resource "aws_instance" "ec2" {
   key_name = "lab-key"
   subnet_id     = aws_subnet.subnet.id
   associate_public_ip_address = true
+  security_groups = "ec2_inbound"
 
   # network_interface {
   #   network_interface_id = aws_network_interface.ec2.id
