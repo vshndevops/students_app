@@ -5,11 +5,11 @@ provider "aws" {
 
 # network interface (eni) for vm1
 
-resource "aws_network_interface" "ec2" {
-  subnet_id   = aws_subnet.subnet.id
-  private_ips = [cidrhost(var.cidr_block, 70)]
+# resource "aws_network_interface" "ec2" {
+#   subnet_id   = aws_subnet.subnet.id
+#   private_ips = [cidrhost(var.cidr_block, 70)]
 
-}
+# }
 
 
 

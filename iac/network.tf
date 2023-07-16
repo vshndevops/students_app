@@ -7,20 +7,9 @@ resource "aws_subnet" "subnet" {
 }
 
 
-# # Internet gateway
+# subnet route-table assosiation
 
-# resource "aws_internet_gateway" "igw" {
-#   vpc_id = "vpc-01b068a477baa5e42"
-
-# }
-
-
-# resource "aws_route_table" "rt1" {
-#   vpc_id = "vpc-01b068a477baa5e42"
-
-#   route {
-#     cidr_block = "0.0.0.0/0"
-#     gateway_id = aws_internet_gateway.igw.id
-#   }
-
-# }
+resource "aws_route_table_association" "a" {
+  subnet_id      = aws_subnet.subnet.id
+  route_table_id = "rtb-0158457a6faac9304"
+}
