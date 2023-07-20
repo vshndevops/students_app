@@ -6,7 +6,6 @@ resource "aws_subnet" "subnet" {
 
 }
 
-
 # subnet route-table assosiation
 
 resource "aws_route_table_association" "a" {
