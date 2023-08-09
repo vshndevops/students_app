@@ -16,3 +16,9 @@
         name: docker-ce
         state: latest
         update_cache: true
+      
+    - name: install docker
+      apt:
+        name: docker
+        state: latest
+        update_cache: true
