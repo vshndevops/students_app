@@ -1,0 +1,17 @@
+---
+- hosts: ec2
+  become: true
+  tasks: 
+    - name: Build Docker Image
+      hosts: your_target_host
+      become: yes
+      tasks:
+        - name: Copy Dockerfile to remote host
+          copy:
+            src: /home/ubuntu/students_app/Dockerfile
+            dest: /tmp/Dockerfile
+
+        - name: Build Docker image
+          docker_image:
+            name: myapp
+            path: /tmp
