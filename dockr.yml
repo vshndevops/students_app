@@ -1,9 +1,4 @@
 ---
-- hosts: ec2
-  become: true
-  tasks: 
-
----
 - hosts: build_host
   gather_facts: no
   tasks:
