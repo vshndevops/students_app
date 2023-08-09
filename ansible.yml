@@ -1,4 +1,5 @@
 - hosts: ec2
+  become: true
   tasks: 
     - name: Add Docker GPG apt Key
       apt_key:
