@@ -1,5 +1,5 @@
 ---
-- hosts: build_host
+- hosts: ec2
   gather_facts: no
   tasks:
     - name: create build directory
