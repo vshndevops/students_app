@@ -9,7 +9,7 @@
       docker_container:
         name: my_app
         state: started
-        image: "myapp"
+        image: myapp
         pull: true
         ports:
           - "8080:8080"
