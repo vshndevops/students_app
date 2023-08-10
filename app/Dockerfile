@@ -13,3 +13,5 @@ COPY . ./
 
 # Expose the port and start the application
 Expose 8080
+
+CMD [ "node" "app.js" ]
