@@ -5,22 +5,22 @@
   tasks:
     - name: create build directory
       file:
-        path: /root/demo-dockerfile
+        path: /root/demo-app
         state: directory
         owner: root
         group: root
         mode: '0755'
     - name: copy Dockerfile
       copy:
-        src: ./Dockerfile
-        dest: /root/demo-dockerfile/Dockerfile
+        src: ./app/.
+        dest: /root/demo-app/
         owner: root
         group: root
         mode: '0644'
     - name: build container image
       docker_image:
-        name: democontainer:v1.0
+        name: myapp:v1.0
         build:
-          path: /root/demo-dockerfile
+          path: /root/demo-app/
           source: build
         state: present
