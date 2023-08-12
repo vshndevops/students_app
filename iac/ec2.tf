@@ -9,10 +9,10 @@ resource "aws_instance" "ec2" {
   key_name = "lab-key"
   subnet_id     = aws_subnet.subnet.id
   associate_public_ip_address = true
-  vpc_security_group_ids= ["sg-0cff0d722ea80a897"]
+  vpc_security_group_ids= aws_security_group.myapp_sg.id
   tags = {
 
-    Name = "APP-SRV"
+    Name = "app-srv"
   }
 
 }
