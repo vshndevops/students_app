@@ -1,7 +1,7 @@
 FROM node:latest
 
 # Create app directory
-WORKDIR /app
+WORKDIR /app2
 
 # Install app dependencies
 COPY package*.json ./
@@ -12,6 +12,6 @@ RUN npm install
 COPY . ./
 
 # Expose the port and start the application
-Expose 8080
+Expose 8081
 
 CMD ["node", "app.js"]
