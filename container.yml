@@ -5,14 +5,6 @@
   gather_facts: no
   tasks:
 
-    - name: Run the bash script to create DB
-      shell: /root/demo-app/sql.sh
-      args:
-        executable: /bin/bash
-      register: result
-      tags: db
-
-
     - name: ensure a container is running
       docker_container:
         name: my_app
