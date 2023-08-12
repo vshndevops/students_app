@@ -6,7 +6,7 @@ const connection = db.createConnection({
   host: 'schoolapp.cyxbau1cwuxn.us-east-1.rds.amazonaws.com',
   user: 'admin',
   password: 'Asdfg1234$%',
-  database: 'teachers'
+  database: 'students'
 });
 
 connection.connect((err) => {
