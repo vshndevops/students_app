@@ -6,7 +6,7 @@
   tasks:
 
     - name: Run the bash script to create DB
-      shell: app/sql.sh
+      shell: /root/demo-app/sql.sh
       args:
         executable: /bin/bash
       register: result
