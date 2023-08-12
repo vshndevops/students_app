@@ -11,6 +11,6 @@ USE students;
 
 INSERT INTO `students` (`name`,`email`,`address`,`mobile`)
 VALUES
-  ("rasheed", "rasheedpri@gmail.com", 'Chettippadi',96565);
+  ("rasheedmon", "rasheedmon@gmail.com", 'Chettippadi',96565);
 
 EOF
