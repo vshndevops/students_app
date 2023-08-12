@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Details</title>
+  <title>Teachers Details</title>
   <style>
     body {
       display: flex;
@@ -39,8 +39,8 @@
   </style>
 </head>
 <body>
-  <h1>Student Details</h1>
-  <table id="students-table">
+  <h1>Teachers Details</h1>
+  <table id="teachers-table">
     <thead>
       <tr>
         <th>Name</th>
@@ -50,12 +50,12 @@
       </tr>
     </thead>
     <tbody>
-      <% students.forEach(student => { %>
+      <% teachers.forEach(teacher => { %>
         <tr>
-          <td><%= student.name %></td>
-          <td><%= student.email %></td>
-          <td><%= student.mobile %></td>
-          <td><%= student.address %></td>
+          <td><%= teacher.name %></td>
+          <td><%= teacher.email %></td>
+          <td><%= teacher.mobile %></td>
+          <td><%= teacher.address %></td>
         </tr>
       <% }); %>
     </tbody>
