@@ -25,7 +25,7 @@ exports.addTeacher = (req, res) => {
   const { name, email, mobile, address } = req.body;
   const steacher = { name, email, mobile, address };
 
-  db.addTeachers(teacher, (err, result) => {
+  db.addTeacher(teacher, (err, result) => {
     if (err) {
       throw err;
     }
@@ -38,7 +38,7 @@ exports.updateTeacher= (req, res) => {
   const teacher = { name, email, mobile, address };
   const teacherId = req.params.id;
 
-  db.updateTeachers(teacherId, teacher, (err, result) => {
+  db.updateTeacher(teacherId, teacher, (err, result) => {
     if (err) {
       throw err;
     }
