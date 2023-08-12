@@ -6,7 +6,8 @@ export PASS=Asdfg1234$%
 # Login to MySQL
 mysql -u$USER -p$PASS -h students.cyxbau1cwuxn.us-east-1.rds.amazonaws.com << EOF
 
-
+CREATE DATABASE students;
+USE students;
 CREATE TABLE IF NOT EXISTS `teachers` (
     `id` int(5) NOT NULL AUTO_INCREMENT,
     `name` varchar(255) NOT NULL,
