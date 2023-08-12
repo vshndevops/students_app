@@ -4,7 +4,7 @@ export USER=admin
 export PASS=Asdfg1234$%
 
 # Login to MySQL
-mysql -u$USER -p$PASS -h azrdsnmysql001.mysql.database.azure.com << EOF
+mysql -u$USER -p$PASS -h students.cyxbau1cwuxn.us-east-1.rds.amazonaws.com << EOF
 
 
 USE students;
