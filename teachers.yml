@@ -1,0 +1,44 @@
+---
+- hosts: ec2
+  become: true
+  gather_facts: no
+  tasks:
+
+    - name: create build directory
+      file:
+        path: /root/school-app2/
+        state: directory
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: copy Dockerfile
+      copy:
+        src: ./app2/.
+        dest: /root/school-app2/
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: build container image
+      docker_image:
+        name: teachersapp:v1.0
+        path: /root/school-app2/
+        source: build
+        state: present
+
+
+    - name: Run the bash script to create DB
+      shell: /root/school-app2/sql.sh
+      args:
+        executable: /bin/bash
+      register: result
+      tags: create_db
+
+    - name: ensure a container is running
+      docker_container:
+        name: teachers_app
+        state: started
+        image: teachersapp:v1.0
+        ports:
+          - "8080:8080"
