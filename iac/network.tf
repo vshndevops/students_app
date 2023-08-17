@@ -1,6 +1,5 @@
-
 resource "aws_subnet" "subnet" {
-  vpc_id            = "vpc-01b068a477baa5e42"
+  vpc_id            = "vpc-070a94f0c15512d73"
   cidr_block        = cidrsubnet(var.cidr_block, 2, 1)
   availability_zone = "${var.region}a"
 

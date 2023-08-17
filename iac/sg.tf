@@ -3,7 +3,7 @@
 resource "aws_security_group" "myapp_sg" {
   name        = "myapp_sg"
   description = "Allow Internet Ingress"
-  vpc_id      = "vpc-01b068a477baa5e42"
+  vpc_id      = "vpc-070a94f0c15512d73"
 
   ingress {
     description = "SSH"
