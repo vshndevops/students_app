@@ -9,5 +9,5 @@ resource "aws_subnet" "subnet" {
 
 resource "aws_route_table_association" "a" {
   subnet_id      = aws_subnet.subnet.id
-  route_table_id = "rtb-0158457a6faac9304"
+  route_table_id = "rtb-0b1a2977fe7ad5e1d"
 }
