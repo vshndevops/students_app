@@ -1,7 +1,7 @@
 # security group for jumphost
 
 resource "aws_security_group" "myapp_sg" {
-  name        = "myapp_sg"
+  name        = "myapp_sg02"
   description = "Allow Internet Ingress"
   vpc_id      = "vpc-070a94f0c15512d73"
 
